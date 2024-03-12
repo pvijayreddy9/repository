@@ -1,0 +1,106 @@
+//Overriding
+class Engine {
+   public void engineDetails(){
+   }
+
+}
+class Car extends Engine{
+   @Override
+   public void engineDetails(){
+	System.out.println("Method overriding");
+   }
+}
+===================================================
+//Overloading
+class Sum{
+   public void sum(int a,int b){
+	System.out.println(a+b);
+
+   }
+   public int sum(int a,int b,int c){
+	return a+b+c;
+   }
+
+}
+=============================================================
+//Aggrgation
+
+class Engine {
+    private String type;
+
+    public Engine(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
+}
+
+class Car {
+    private String model;
+    private Engine engine; // Aggregation
+
+    public Car(String model, Engine engine) {
+        this.model = model;
+        this.engine = engine;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Engine engine = new Engine("V8");
+        Car car = new Car("Toyota Camry", engine);
+
+        System.out.println("Car model: " + car.getModel());
+        System.out.println("Engine type: " + car.getEngine().getType());
+    }
+}
+
+======================================================
+//Composition
+class Engine {
+    private String type;
+
+    public Engine(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
+}
+class Car {
+    private String model;
+    private Engine engine; // Composition
+
+    public Car(String model, String engineType) {
+        this.model = model;
+        this.engine = new Engine(engineType); // Composition
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public Engine getEngine() {
+        return engine;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car car = new Car("Toyota Camry", "V8");
+
+        System.out.println("Car model: " + car.getModel());
+        System.out.println("Engine type: " + car.getEngine().getType());
+    }
+}
+

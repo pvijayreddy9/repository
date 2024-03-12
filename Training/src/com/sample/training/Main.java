@@ -7,13 +7,14 @@ public class Main {
     }
     
     public static void main(String[] args) {
-        System.out.println("Arguments provided:");
+        System.out.println("Normal main()");
         for (String arg : args) {
             System.out.println(arg);
         }
         main();
         main(654);
         main(976,"Integer Provided");
+        main(98762345);
     }
     public static void main(int value) {
         System.out.println("Integer argument provided: " + value);

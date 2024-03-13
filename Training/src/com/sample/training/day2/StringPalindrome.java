@@ -1,17 +1,10 @@
 package com.sample.training.day2;
 
-import java.util.Scanner;
-
 public class StringPalindrome {
-	public static boolean stringPalindromeOrNot(String str) {
-		String strReverse = "";		
-		char ch; 
-		for (int i=0; i<str.length(); i++) { 
-			ch= str.charAt(i); 
-			strReverse= ch+strReverse;
-		}		
-		System.out.println(strReverse);
-		if(str.equals(strReverse)) 
+	public static boolean stringPalindromeOrNot(String str) {		
+		StringBuilder sb = new StringBuilder(str);				
+		System.out.println(sb);
+		if(str.equals(sb.reverse().toString())) 
 			return true;
 		else
 			return false;

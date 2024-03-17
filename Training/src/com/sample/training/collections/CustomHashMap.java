@@ -56,7 +56,7 @@ public class CustomHashMap<K, V> {
                 }
             }
         }
-        return null; // Key not found
+        return null;
     }
 
     public int size() {

@@ -1,7 +1,5 @@
 package com.sample.training.collections;
 
-import java.util.LinkedList;
-
 public class DemoCollections {
 
 	public static void main(String[] args) {

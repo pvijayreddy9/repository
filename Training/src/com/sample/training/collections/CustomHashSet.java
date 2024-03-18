@@ -1,7 +1,6 @@
 package com.sample.training.collections;
 
 import java.util.HashMap;
-import java.util.HashSet;
 
 public class CustomHashSet<E> {
     private HashMap<E, Object> map;

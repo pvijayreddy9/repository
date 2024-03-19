@@ -11,9 +11,9 @@ public class DemoPerson {
 		HashMap<Person, Object> personMap = new HashMap<>();
 		
 		Person per = new Person("Ravi", 28, "Hyd");
-		Person per1 = new Person("Ravi", 28, "Hyd");
+		Person per1 = per.
 		personMap.put(per, PRESENT);
-		personMap.put(per1, PRESENT);
+		personMap.put(per, PRESENT);
 		
 		System.out.println(" PersonMap :" + personMap);
 

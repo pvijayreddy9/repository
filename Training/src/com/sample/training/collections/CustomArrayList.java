@@ -1,5 +1,7 @@
 package com.sample.training.collections;
 
+import java.util.Arrays;
+
 public class CustomArrayList<E> {
     private static final int DEFAULT_CAPACITY = 10;
     private Object[] elements;
@@ -48,18 +50,24 @@ public class CustomArrayList<E> {
         elements = newElements;
     }
 
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder("[");
-        for (int i = 0; i < size; i++) {
-            sb.append(elements[i]);
-            if (i < size - 1) {
-                sb.append(", ");
-            }
-        }
-        sb.append("]");
-        return sb.toString();
-    }
+	@Override
+	public String toString() {
+		return "CustomArrayList [elements=" + Arrays.toString(elements) + "]";
+	}
+    
+
+//    @Override
+//    public String toString() {
+//        StringBuilder sb = new StringBuilder("[");
+//        for (int i = 0; i < size; i++) {
+//            sb.append(elements[i]);
+//            if (i < size - 1) {
+//                sb.append(", ");
+//            }
+//        }
+//        sb.append("]");
+//        return sb.toString();
+//    }
 
     // Other methods like remove, clear, contains, etc. can be implemented here
 }

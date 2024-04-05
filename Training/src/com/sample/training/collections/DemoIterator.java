@@ -22,6 +22,7 @@ public class DemoIterator {
         }
         iterator.remove();
         
+        
         //ListIterator
 //        ListIterator<Integer> listIt  = numbers.listIterator();
 //        while(listIt.hasNext()) {

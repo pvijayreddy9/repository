@@ -12,6 +12,15 @@ public class ArraysSortingByStreams {
 //		List<String> strList = Arrays.asList(strArr);
 //		List<String> sortedList = strList.stream().sorted().collect(Collectors.toList());
 		
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+
+        // Using reduce to find the sum of integers
+        int sum = numbers.stream().reduce(0, (a, b) -> a + b);
+
+        System.out.println("Sum of integers: " + sum);
+		    
+
+		
 	}
 
 }

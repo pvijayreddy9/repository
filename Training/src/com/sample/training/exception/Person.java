@@ -18,8 +18,13 @@ public class Person implements Comparable<Person>, Cloneable{
     public String getName() {
         return name;
     }
+    
 
-    public int getAge() {
+    public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
         return age;
     }
 
@@ -93,9 +98,9 @@ public class Person implements Comparable<Person>, Cloneable{
 	};
 
 	@Override
-	public int compareTo(Person o) {
+	public int compareTo(Person p) {
 		
-		return this.name.compareTo(o.name);
+		return this.name.compareTo(p.name);
 	}
 	
 }

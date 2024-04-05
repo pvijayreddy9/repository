@@ -12,6 +12,8 @@ public class CustomHashSet<E> {
     public CustomHashSet() {
         map = new HashMap<>();
     }
+    
+    
 
     public boolean add(E element) {
         return map.put(element, PRESENT) == null;

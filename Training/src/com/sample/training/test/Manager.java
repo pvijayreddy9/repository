@@ -1,8 +1,5 @@
-import java.security.KeyStore.Entry;
-import java.util.ArrayList;
+package com.sample.training.test;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
 
 public class Manager {
 

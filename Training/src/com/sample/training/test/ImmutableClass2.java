@@ -1,4 +1,4 @@
-
+package com.sample.training.test;
 public final class ImmutableClass2 {
 
 	private Employee emp;

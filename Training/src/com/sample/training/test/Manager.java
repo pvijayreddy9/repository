@@ -8,7 +8,7 @@ public class Manager {
 		HashMap<Character, Integer> countMap = new HashMap<>();
 		
 		for (char c : s1.toCharArray()) {
-			int i = 1;
+			
 			if(countMap.containsKey(c)) {
 				countMap.put(c, countMap.get(c)+1);
 			}else {

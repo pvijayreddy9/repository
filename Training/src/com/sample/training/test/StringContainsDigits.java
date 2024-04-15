@@ -7,15 +7,18 @@ public class StringContainsDigits {
 		boolean b = false;
 		for (Character c : s1.toCharArray()) {
 			
-			if(c.isDigit(c)) {
-				System.out.println("string contains Numbers");
+			if(c.isDigit(c)) {				
 				b=true;
 				return;
 			}else {
 				b=false;
 			}
 		}
-		System.out.println();
+		if(b) 
+			System.out.println("string contains Numbers");
+		else
+			System.out.println("string doesn't contains Numbers");
+		
 
 	}
 

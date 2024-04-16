@@ -36,8 +36,10 @@ public class DemoSortingByStreams {
 		System.out.println("List sort by comparator: ");
 		listPer.stream().sorted(Person.SalaryCoparator).forEach(p->System.out.println(p));
 		//3 Highest Salaries
-		List salaries = listPer.stream().skip(listPer.size()-3).collect(Collectors.toList());		
-		System.out.println(salaries);
+		List salaries = listPer.stream().skip(3).collect(Collectors.toList());	
+		System.out.println("Skip 3");
+		listPer.stream().sorted().skip(3).forEach(p->System.out.println(p));
+		
 		
 		List<Integer> numbers = Arrays.asList(3,8,7,2,9,19,4);
 		numbers.stream().filter(i-> i%2 == 0).peek(x->System.out.println("even Number: "+x)).map(n->n*2).forEach(num->System.out.println(num));

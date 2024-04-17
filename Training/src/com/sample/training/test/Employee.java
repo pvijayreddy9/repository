@@ -7,11 +7,13 @@ public class Employee{
 	private int id;
 	private String name;
 	private String gender;
+	private int salary;
 	
-	public Employee(int id, String name,String gender) {
+	public Employee(int id, String name,String gender,int salary) {
 		this.id = id;
 		this.name = name;
 		this.gender = gender;
+		this.salary = salary;
 	}
 	
 	public int getId() {
@@ -36,11 +38,23 @@ public class Employee{
 		this.gender = gender;
 	}
 
+	public int getSalary() {
+		return salary;
+	}
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+
+	
+	
 	@Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + "]";
+		return "Employee [id=" + id + ", name=" + name + ", gender=" + gender + ", salary=" + salary + "]";
 	}
-	
+
+
+
 	public static Comparator<Employee> nameComparator = new Comparator<Employee>() {
 		
 		@Override
@@ -50,6 +64,14 @@ public class Employee{
 				return 1;
 			else
 				return -1;		
+		}
+	};
+	public static Comparator<Employee> salaryComparator = new Comparator<Employee>() {
+		
+		@Override
+		public int compare(Employee e1, Employee e2) {
+			
+			return 	e1.getSalary()-e2.getSalary();
 		}
 	};
 	

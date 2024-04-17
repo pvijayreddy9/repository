@@ -8,11 +8,12 @@ public class ThreadManager {
 		NormalThread thread = new NormalThread();		
 		
 		t1.start();	
-		t1.sleep(5000);
+		t1.sleep(2000);
 		t1.join();
 		thread.start();
-		thread.wait(2000);
-		thread.join();
+		Thread.sleep(3000);
+        thread.interrupt();
+		
 	}
 
 }

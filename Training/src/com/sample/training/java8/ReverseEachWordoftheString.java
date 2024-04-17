@@ -6,7 +6,7 @@ public class ReverseEachWordoftheString {
 
 	public static void main(String[] args) {
 		String str = "Hello every one good morning";
-		Stream.map(str -> )
+		String reverseStr = 
 	}
 
 }

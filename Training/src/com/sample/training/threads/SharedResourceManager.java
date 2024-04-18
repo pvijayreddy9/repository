@@ -6,11 +6,11 @@ public class SharedResourceManager {
 		RunnableThread rt = new RunnableThread();
 		Thread t1 = new Thread(rt);
 		NormalThread nt = new NormalThread();
+				
+		nt.start();
 		t1.start();
 		
-		nt.start();
-		nt.wait();		
-		nt.notify();
+		
 
 	}
 

@@ -10,9 +10,9 @@ public class NormalThread extends Thread {
 //            System.out.println("NormalThread is running.");
 //        }
 //        System.out.println("Normal Thread interrupted.");
-		SharedResource sh = new SharedResource();
+		SharedResource sr = SharedResource.getInstance();
 		 for (int i = 0; i < 100; i++) {
-			 sh.addItem();
+			 sr.addItem();
          }
 		
 	}

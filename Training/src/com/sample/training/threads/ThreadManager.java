@@ -3,16 +3,15 @@ package com.sample.training.threads;
 public class ThreadManager {
 
 	public static void main(String[] args) throws InterruptedException {
-		RunnableThread runnable = new RunnableThread();
-		Thread t1 = new Thread(runnable);
-		NormalThread thread = new NormalThread();		
+		Thread1 t1 = new Thread1();		
+		Thread2 t2 = new Thread2();		
+		Thread t2 = new Thread2();		
+		Thread t2 = new Thread2();		
 		
-		t1.start();	
-		t1.sleep(2000);
-		t1.join();
-		thread.start();
-		Thread.sleep(3000);
-        thread.interrupt();
+		t1.start();		
+		t1.join();		
+		t2.start();		
+        t2.interrupt();
 		
 	}
 
